@@ -86,3 +86,10 @@ CREATE TABLE public.swimages (
 	description character varying(200) NOT NULL,
 	CONSTRAINT swimages_pk PRIMARY KEY (id)
 );
+
+CREATE TABLE public.swuserprocess( 
+        user_id integer NOT NULL,
+        swprocess serial NOT NULL,
+        write boolean NOT NULL DEFAULT 'false',
+        CONSTRAINT userswprocess_pk PRIMARY KEY (user_id, swprocess, write) 
+);
